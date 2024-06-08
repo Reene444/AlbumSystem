@@ -3,10 +3,12 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Account;
 import com.example.demo.model.Album;
+import com.example.demo.model.Photo;
 import com.example.demo.payload.album.AlbumPayloadDTO;
 import com.example.demo.payload.album.AlbumViewDTO;
 import com.example.demo.service.AccountService;
 import com.example.demo.service.AlbumService;
+import com.example.demo.service.PhotoService;
 import com.example.demo.util.AppUtils.AppUtil;
 import com.example.demo.util.constants.AlbumError;
 import io.swagger.v3.oas.annotations.Operation;
@@ -32,7 +34,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/v1/albums")
+@RequestMapping("/api/v1")
 @Tag(name = "Albumm Controller", description = "Controller for album and photo management")
 @Slf4j
 public class AlbumController {
@@ -43,7 +45,10 @@ public class AlbumController {
     @Autowired
     private AlbumService albumService;
 
-    @PostMapping(value = "/add",consumes = "application/json",produces = "application/json")
+    @Autowired
+    private PhotoService photoService;
+
+    @PostMapping(value = "/albums/add",consumes = "application/json",produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     @ApiResponse(responseCode = "400",description = "Please add valid name a description")
     @ApiResponse(responseCode = "201",description = "Account added")
@@ -67,7 +72,7 @@ public class AlbumController {
         }
 
     }
-    @GetMapping(value = "/",produces = "application/json")
+    @GetMapping(value = "/albums",produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     @ApiResponse(responseCode = "200",description = " List of albums")
     @ApiResponse(responseCode = "401",description = "Token missing")
@@ -87,7 +92,7 @@ public class AlbumController {
 
     }
 
-    @PostMapping(value = "/{album_id}/photoes",consumes = {"multipart/form-data"})
+    @PostMapping(value = "/albums/{album_id}/photoes",consumes = {"multipart/form-data"})
     @Operation(summary = "Upload photo album")
     @SecurityRequirement(name="album-system-api")
     public ResponseEntity<List<String>> photos(@RequestPart(required = true) MultipartFile[] files,@PathVariable long album_id, Authentication authentication){
@@ -128,15 +133,25 @@ public class AlbumController {
                 String absolute_fileLocation= AppUtil.get_photo_upload_path(final_photo_name,album_id);
                 Path path= Paths.get(absolute_fileLocation);
                 Files.copy(file.getInputStream(),path, StandardCopyOption.REPLACE_EXISTING);
+                Photo photo=new Photo();
+                photo.setName(fileName);
+                photo.setFileName(final_photo_name);
+                photo.setOriginalFileName(fileName);
+                photo.setAlbum(album);
+                photoService.save(photo);
+
 
             }catch (Exception e){
 
             }
+        }else{
+            fileNamesWithError.add(file.getOriginalFilename());
         }
         });
 
 
-        return null;
+
+        return ResponseEntity.ok(fileNamesWithSuccess);
     }
 
 
