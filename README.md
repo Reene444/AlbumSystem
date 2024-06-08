@@ -6,7 +6,7 @@
 - `Docker`
 - `Kubernate`
 ## :book: How to use
-To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [ReactJS](https://react.dev/) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/play-with-docker/) installed on your computer. From your command line:
 
 ```
 # Clone this repository
@@ -21,7 +21,7 @@ $ mvn clean package
 # Run the app
 $ java -jar target/album-system-api-0.0.1-SNAPSHOT.jar
 
-# Read the swagger api document
+# Read the swagger api document in the browser
 $ link:localhost:8082/swagger-ui/index.html
 ```
 ## :link: Demo
