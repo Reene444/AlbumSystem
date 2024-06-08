@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@SecurityScheme(name = "rest-test1-api",scheme = "bearer",type= SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
+@SecurityScheme(name = "album-system-api",scheme = "bearer",type= SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
 public class AlbumApplication {
 
     public static void main(String[] args) {

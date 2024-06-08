@@ -16,10 +16,10 @@ $ git clone https://github.com/Reene444/AlbumSystem.git
 $ cd AlbumSystem
 
 # Install dependencies
-$ npm install
+$ mvn clean package
 
 # Run the app
-$ npm start
+$ java -jar target/album-system-api-0.0.1-SNAPSHOT.jar
 
 #To developer:doker
 $docker buildx build --platform linux/amd64 --push -t reene44444/react-app:react-tic-game-test8 .

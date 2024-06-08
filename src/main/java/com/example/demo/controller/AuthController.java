@@ -86,7 +86,7 @@ public class AuthController {
       @ApiResponse(responseCode = "200",description = "List of users")
       @ApiResponse(responseCode = "401",description = "Token missing")
       @ApiResponse(responseCode = "403",description = "Token error")
-      @SecurityRequirement(name="rest-test1-api")
+      @SecurityRequirement(name="album-system-api")
       @Operation(summary = "List user api")
       public List<AccountViewDTO> Users(){
         List<AccountViewDTO>accounts=new ArrayList<>();
@@ -101,7 +101,7 @@ public class AuthController {
     @ApiResponse(responseCode = "400",description = "Invalid user")
     @ApiResponse(responseCode = "403",description = "Token error")
     @ResponseStatus(HttpStatus.OK)
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     @Operation(summary = "Update authorities")
     public ResponseEntity<AccountViewDTO> update_auth(@Valid @RequestBody AuthoritiesDTO authoritiesDTO, @PathVariable long user_id){
 
@@ -121,7 +121,7 @@ public class AuthController {
     @ApiResponse(responseCode = "200",description = "Profile of users")
     @ApiResponse(responseCode = "401",description = "Token missing")
     @ApiResponse(responseCode = "403",description = "Token error")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     @Operation(summary = "View profile")
     public ProfileDTO profile(Authentication authentication){
         String email = authentication.getName();
@@ -136,7 +136,7 @@ public class AuthController {
     @ApiResponse(responseCode = "200",description = "Profile of users")
     @ApiResponse(responseCode = "401",description = "Token missing")
     @ApiResponse(responseCode = "403",description = "Token error")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     @Operation(summary = "Update profile")
     public AccountViewDTO update_password(@Valid @RequestBody PasswordDTO passwordDTO,Authentication authentication){
         String email = authentication.getName();
@@ -157,7 +157,7 @@ public class AuthController {
     @ApiResponse(responseCode = "200",description = "Profile of users")
     @ApiResponse(responseCode = "401",description = "Token missing")
     @ApiResponse(responseCode = "403",description = "Token error")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Delete profile")
     public ResponseEntity<String> delete_profile(Authentication authentication){

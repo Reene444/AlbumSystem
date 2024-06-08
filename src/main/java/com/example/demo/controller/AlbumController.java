@@ -45,7 +45,7 @@ public class AlbumController {
     @ApiResponse(responseCode = "400",description = "Please add valid name a description")
     @ApiResponse(responseCode = "201",description = "Account added")
     @Operation(summary = "Add an Album api")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     public ResponseEntity<AlbumViewDTO> addAlbum(@Valid @RequestBody AlbumPayloadDTO albumPayloadDTO, Authentication authentication){
         try{
             Album album=new Album();
@@ -70,7 +70,7 @@ public class AlbumController {
     @ApiResponse(responseCode = "401",description = "Token missing")
     @ApiResponse(responseCode = "403",description = "Token error")
     @Operation(summary = "List of album api")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     public List<AlbumViewDTO> albums(Authentication authentication){
         String email=authentication.getName();
         Optional<Account> optionalAccount=accountService.findByEmail(email);
@@ -86,7 +86,7 @@ public class AlbumController {
 
     @PostMapping(value = "/{album_id}/photoes",consumes = {"multipart/form-data"})
     @Operation(summary = "Upload photo album")
-    @SecurityRequirement(name="rest-test1-api")
+    @SecurityRequirement(name="album-system-api")
     public List<String> photos(@RequestPart(required = true) MultipartFile[] files,@PathVariable long album_id, Authentication authentication){
         List<String>fileNames=new ArrayList<>();
         Arrays.asList(files).stream().forEach(file->{
