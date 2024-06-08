@@ -1,7 +1,7 @@
 <h1 align="center">AlbumSystem Apis</h1>
 
 
-## :rocket: Skills
+## :stack: Skills
 - `Springboot`
 - `Docker`
 - `Kubernate`
