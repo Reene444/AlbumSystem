@@ -3,12 +3,10 @@ package com.albumSystem.demo.controller;
 
 import com.albumSystem.demo.model.Account;
 import com.albumSystem.demo.model.Photo;
-import com.albumSystem.demo.payload.album.AlbumPayloadDTO;
-import com.albumSystem.demo.payload.album.PhotoDTO;
+import com.albumSystem.demo.payload.album.*;
 import com.albumSystem.demo.service.PhotoService;
 import com.albumSystem.demo.util.AppUtils.AppUtil;
 import com.albumSystem.demo.model.Album;
-import com.albumSystem.demo.payload.album.AlbumViewDTO;
 import com.albumSystem.demo.service.AccountService;
 import com.albumSystem.demo.service.AlbumService;
 import com.albumSystem.demo.util.constants.AlbumError;
@@ -21,10 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -143,6 +138,100 @@ public class AlbumController {
         };
             AlbumViewDTO albumViewDTO=new AlbumViewDTO(album.getId(),album.getName(),album.getDescription(),photos);
             return ResponseEntity.ok(albumViewDTO);
+    }
+
+    @PutMapping(value = "/albums/{album_id}/update",consumes = "application/json",produces = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    @ApiResponse(responseCode = "204",description = "Album update")
+    @ApiResponse(responseCode = "400",description = "Please add a valid description")
+    @ApiResponse(responseCode = "401",description = "Token missing")
+    @ApiResponse(responseCode = "403",description = "Token error")
+    @Operation(summary = "Update an Album")
+    @SecurityRequirement(name="album-system-api")
+    public ResponseEntity<AlbumViewDTO> update_Album(@Valid @RequestBody AlbumPayloadDTO albumPayloadDTO,
+                                                     @PathVariable long album_id,Authentication authentication){
+    try{
+         String email=authentication.getName();
+         Optional<Account> optionalAccount=accountService.findByEmail(email);
+         Account account=optionalAccount.get();
+
+         Optional<Album>optionalAlbum=albumService.findById(album_id);
+         Album album;
+         if(optionalAlbum.isPresent()){
+             album=optionalAlbum.get();
+             if(account.getId()!=album.getAccount().getId()){
+                 return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+             }
+
+         }else{
+             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+         }
+
+         album.setName(albumPayloadDTO.getName());
+         album.setDescription(albumPayloadDTO.getDescription());
+         album=albumService.save(album);
+         List<PhotoDTO> photos=new ArrayList<>();
+         for(Photo photo: photoService.findByAlbumId(album.getId())){
+             String link="albums/"+album.getId()+"/photos/"+photo.getId()+"/download-photo" ;
+             photos.add(new PhotoDTO(photo.getId(),photo.getName(),photo.getDescription(),photo.getFileName(),link));
+
+
+
+         }
+         AlbumViewDTO  albumViewDTO = new AlbumViewDTO(album.getId(),album.getName(),album.getDescription(),photos);
+         return ResponseEntity.ok(albumViewDTO);
+    }catch(Exception e){
+            log.debug(AlbumError.ADD_ALBUM_ERROR.toString()+":"+e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+
+    }
+
+
+    @PutMapping(value = "/albums/{album_id}/photos/{photo_id}/update",consumes = "application/json",produces = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    @ApiResponse(responseCode = "204",description = "Album update")
+    @ApiResponse(responseCode = "400",description = "Please add a valid description")
+    @ApiResponse(responseCode = "401",description = "Token missing")
+    @ApiResponse(responseCode = "403",description = "Token error")
+    @Operation(summary = "Update a photo")
+    @SecurityRequirement(name="album-system-api")
+    public ResponseEntity<PhotoViewDTO> update_Photo(@Valid @RequestBody PhotoPayloadDTO photoPayloadDTO,
+                                                     @PathVariable long album_id, @PathVariable long photo_id, Authentication authentication){
+        try{
+            String email=authentication.getName();
+            Optional<Account> optionalAccount=accountService.findByEmail(email);
+            Account account=optionalAccount.get();
+
+            Optional<Album>optionalAlbum=albumService.findById(album_id);
+            Album album;
+            if(optionalAlbum.isPresent()){
+                album=optionalAlbum.get();
+                if(account.getId()!=album.getAccount().getId()){
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+                }
+
+            }else{
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            }
+            Optional<Photo>optionalPhoto =photoService.findById(photo_id);
+            if(optionalPhoto.isPresent()){
+                Photo photo=optionalPhoto.get();
+                photo.setName(photoPayloadDTO.getName());
+                photo.setDescription(photoPayloadDTO.getDescription());
+                photoService.save(photo);
+                PhotoViewDTO photoViewDTO=new PhotoViewDTO(photo.getId(),photoPayloadDTO.getName(),photoPayloadDTO.getDescription());
+                return ResponseEntity.ok(photoViewDTO);
+            }
+            else{
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            }
+
+        }catch(Exception e){
+            log.debug(AlbumError.ADD_ALBUM_ERROR.toString()+":"+e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+
     }
 
 

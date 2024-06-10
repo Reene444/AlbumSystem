@@ -6,7 +6,7 @@ import com.albumSystem.demo.service.AccountService;
 import com.albumSystem.demo.service.TokenService;
 import com.albumSystem.demo.util.constants.AccountError;
 import com.albumSystem.demo.util.constants.AccountSuccess;
-import com.example.demo.payload.auth.*;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
