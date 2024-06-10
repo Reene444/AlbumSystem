@@ -6,6 +6,7 @@ import com.example.demo.model.Album;
 import com.example.demo.model.Photo;
 import com.example.demo.payload.album.AlbumPayloadDTO;
 import com.example.demo.payload.album.AlbumViewDTO;
+import com.example.demo.payload.album.PhotoDTO;
 import com.example.demo.service.AccountService;
 import com.example.demo.service.AlbumService;
 import com.example.demo.service.PhotoService;
@@ -74,7 +75,7 @@ public class AlbumController {
             Account account=accountOptional.get();
             album.setAccount(account);
             album=albumService.save(album);
-            AlbumViewDTO albumViewDTO=new AlbumViewDTO(album.getId(), album.getName(),album.getDescription());
+            AlbumViewDTO albumViewDTO=new AlbumViewDTO(album.getId(), album.getName(),album.getDescription(),null);
             return  ResponseEntity.ok(albumViewDTO);
         }catch (Exception e){
             log.debug(AlbumError.ADD_ALBUM_ERROR.toString()+": "+e.getMessage());
@@ -95,12 +96,58 @@ public class AlbumController {
         Account account=optionalAccount.get();
         List<AlbumViewDTO>albums=new ArrayList<>();
         for(Album album:albumService.findByAccount_id(account.getId())){
-            albums.add(new AlbumViewDTO(album.getId(),album.getName(),album.getDescription()));
+            List<PhotoDTO> photos = new ArrayList<>();
+            for(Photo photo:photoService.findByAlbumId(album.getId())){
+                String link="albums/"+album.getId()+"/photos/"+photo.getId()+"/download-photo" ;
+                photos.add(new PhotoDTO(photo.getId(),photo.getName(),photo.getDescription(),photo.getFileName(),link));
+
+
+            }
+            albums.add(new AlbumViewDTO(album.getId(),album.getName(),album.getDescription(),photos));
+
         }
         return albums;
-
+        //when response information don't need the response code the return don't need to use ResponseEnty
 
     }
+
+
+    @GetMapping(value = "/albums/{album_id}",produces = "application/json")
+    @ResponseStatus(HttpStatus.OK)
+    @ApiResponse(responseCode = "200",description = " List of albums")
+    @ApiResponse(responseCode = "401",description = "Token missing")
+    @ApiResponse(responseCode = "403",description = "Token error")
+    @Operation(summary = "List album by album ID")
+    @SecurityRequirement(name="album-system-api")
+    public ResponseEntity<AlbumViewDTO> albums_by_id(@PathVariable long album_id, Authentication authentication){
+        String email=authentication.getName();
+        Optional<Account> optionalAccount=accountService.findByEmail(email);
+        Account account=optionalAccount.get();
+        Optional<Album>optionalAlbum=albumService.findById(album_id);
+        Album album;
+        if(optionalAlbum.isPresent()){
+            album=optionalAlbum.get();
+        }else{
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+
+        }
+        if(account.getId()!=album.getAccount().getId()){
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+        }
+
+        List<PhotoDTO> photos=new ArrayList<>();
+        for(Photo photo: photoService.findByAlbumId(album_id)){
+            String link="albums/"+album.getId()+"/photos/"+photo.getId()+"/download-photo" ;
+            photos.add(new PhotoDTO(photo.getId(),photo.getName(),photo.getDescription(),photo.getFileName(),link));
+
+        };
+            AlbumViewDTO albumViewDTO=new AlbumViewDTO(album.getId(),album.getName(),album.getDescription(),photos);
+            return ResponseEntity.ok(albumViewDTO);
+    }
+
+
+
+
 
     @PostMapping(value = "/albums/{album_id}/photos",consumes = {"multipart/form-data"})
     @Operation(summary = "Upload photo album")
