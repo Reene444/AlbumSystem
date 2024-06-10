@@ -11,22 +11,28 @@ import com.example.demo.service.AlbumService;
 import com.example.demo.service.PhotoService;
 import com.example.demo.util.AppUtils.AppUtil;
 import com.example.demo.util.constants.AlbumError;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.swing.text.html.Option;
+import javax.imageio.ImageIO;
 import javax.validation.Valid;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -38,6 +44,10 @@ import java.util.*;
 @Tag(name = "Albumm Controller", description = "Controller for album and photo management")
 @Slf4j
 public class AlbumController {
+
+    static final String PHOTOS_FOLDER_NAME="photos";
+    static final String THUMBNAIL_FOLDER_NAME="thumbnails";
+    static final int   THUMBNAIL_WIDTH=300;
 
     @Autowired
     private AccountService accountService;
@@ -95,7 +105,7 @@ public class AlbumController {
     @PostMapping(value = "/albums/{album_id}/photoes",consumes = {"multipart/form-data"})
     @Operation(summary = "Upload photo album")
     @SecurityRequirement(name="album-system-api")
-    public ResponseEntity<List<String>> photos(@RequestPart(required = true) MultipartFile[] files,@PathVariable long album_id, Authentication authentication){
+    public ResponseEntity<List<HashMap<String, List<String>>>> photos(@RequestPart(required = true) MultipartFile[] files, @PathVariable long album_id, Authentication authentication){
        String email=authentication.getName();
        Optional<Account>optionalAccount=accountService.findByEmail(email);
        Account account=optionalAccount.get();
@@ -130,7 +140,7 @@ public class AlbumController {
                 String fileName=file.getOriginalFilename();
                 String generatedString= RandomStringUtils.random(length,userLetters,userNumbers);
                 String final_photo_name=generatedString+fileName;
-                String absolute_fileLocation= AppUtil.get_photo_upload_path(final_photo_name,album_id);
+                String absolute_fileLocation= AppUtil.get_photo_upload_path(final_photo_name,PHOTOS_FOLDER_NAME,album_id);
                 Path path= Paths.get(absolute_fileLocation);
                 Files.copy(file.getInputStream(),path, StandardCopyOption.REPLACE_EXISTING);
                 Photo photo=new Photo();
@@ -140,20 +150,83 @@ public class AlbumController {
                 photo.setAlbum(album);
                 photoService.save(photo);
 
+                BufferedImage thumbImg=AppUtil.getThumbnail(file,THUMBNAIL_WIDTH);
+                File thumbnail_location=new File(AppUtil.get_photo_upload_path(final_photo_name,THUMBNAIL_FOLDER_NAME,album_id));
+                ImageIO.write(thumbImg,file.getContentType().split("/")[1],thumbnail_location);
+
+
 
             }catch (Exception e){
+                log.debug(AlbumError.PHOTO_UPLOAD_ERROR.toString()+":"+e.getMessage());
+                fileNamesWithError.add(file.getOriginalFilename());
 
             }
         }else{
             fileNamesWithError.add(file.getOriginalFilename());
         }
         });
+        HashMap<String,List<String>> result = new HashMap<>();
+        result.put("SUCCESS",fileNamesWithSuccess);
+        result.put("ERROR",fileNamesWithError);
 
-
-
-        return ResponseEntity.ok(fileNamesWithSuccess);
+        List<HashMap<String,List<String>>> response=new ArrayList<>();
+        response.add(result);
+        return ResponseEntity.ok(response);
     }
 
+    @GetMapping("albums/{album_id}/photos/{photo_id}/download-photo")
+    @SecurityRequirement(name="album-system-api")
+    public ResponseEntity<?> downloadPhoto(@PathVariable("album_id") long album_id,
+                                           @PathVariable("photo_id") long photo_id, Authentication authentication){
+
+        return downloadFile(album_id,photo_id,PHOTOS_FOLDER_NAME,authentication);
+    }
+    @GetMapping("albums/{album_id}/photos/{photo_id}/download-thumbnail")
+    @SecurityRequirement(name="album-system-api")
+    public ResponseEntity<?> downloadThumbnail(@PathVariable("album_id") long album_id,
+                                           @PathVariable("photo_id") long photo_id, Authentication authentication){
+
+        return downloadFile(album_id,photo_id,THUMBNAIL_FOLDER_NAME,authentication);
+    }
+
+    public ResponseEntity<?> downloadFile(long album_id, long photo_id, String folder_name,Authentication authentication){
+
+        String email=authentication.getName();
+        Optional<Account>optionalAccount=accountService.findByEmail(email);
+        Account account=optionalAccount.get();
+        Optional<Album>optionalAlbum=albumService.findById(album_id);
+        Album album;
+        if(optionalAccount.isPresent()){
+            album=optionalAlbum.get();
+            if(account.getId()!=album.getAccount().getId()){
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            }
+        }else{
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+
+        }
+        Optional<Photo>optionalPhoto=photoService.findById(photo_id);
+        if(optionalPhoto.isPresent()){
+            Photo photo = optionalPhoto.get();
+            Resource resource= null;
+            try{
+                resource = AppUtil.getFileAsResource(album_id,folder_name,photo.getFileName());
+
+            }catch (IOException e){
+                return ResponseEntity.internalServerError().build();
+            }
+
+            String contentType = "application/octet-stream";
+            String headerValue="attachment; filename=\""+photo.getOriginalFileName()+ "\"";//this points the information of the file
+
+            return ResponseEntity.ok()
+                    .contentType(MediaType.parseMediaType(contentType))
+                    .header(HttpHeaders.CONTENT_DISPOSITION,headerValue)
+                    .body(resource);
+        }else{
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+    }
 
 }
 
