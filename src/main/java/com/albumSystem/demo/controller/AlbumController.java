@@ -217,6 +217,9 @@ public class AlbumController {
             Optional<Photo>optionalPhoto =photoService.findById(photo_id);
             if(optionalPhoto.isPresent()){
                 Photo photo=optionalPhoto.get();
+                if(photo.getId()!=album.getAccount().getId()){
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+                }
                 photo.setName(photoPayloadDTO.getName());
                 photo.setDescription(photoPayloadDTO.getDescription());
                 photoService.save(photo);
@@ -343,6 +346,10 @@ public class AlbumController {
         Optional<Photo>optionalPhoto=photoService.findById(photo_id);
         if(optionalPhoto.isPresent()){
             Photo photo = optionalPhoto.get();
+            if(photo.getAlbum().getId()!=album_id){
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+            }
+
             Resource resource= null;
             try{
                 resource = AppUtil.getFileAsResource(album_id,folder_name,photo.getFileName());
