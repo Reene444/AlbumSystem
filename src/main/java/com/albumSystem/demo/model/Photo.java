@@ -25,4 +25,5 @@ public class Photo {
     @ManyToOne
     @JoinColumn(name="album_id",referencedColumnName = "id",nullable = false)
     private Album album;
+
 }
