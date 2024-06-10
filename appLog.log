@@ -1,7 +1,7 @@
 2024-06-10 00:19:30,535 [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m2s936ms).
-2024-06-10 01:21:43,554 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 13859 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:21:43,557 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:21:43,558 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:21:43,554 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 13859 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:21:43,557 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:21:43,558 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:21:44,669 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:21:44,774 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:21:45,440 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -52,7 +52,7 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 2024-06-10 01:21:48,165 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2024-06-10 01:21:48,867 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2024-06-10 01:21:48,880 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
@@ -81,7 +81,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
@@ -152,9 +152,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Libra
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
 	at org.h2.mvstore.db.Store.<init>(Store.java:133)
 	... 59 common frames omitted
-2024-06-10 01:31:15,849 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16730 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:31:15,851 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:31:15,852 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:31:15,849 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16730 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:31:15,851 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:31:15,852 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:31:17,150 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:31:17,247 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:31:17,863 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -205,7 +205,7 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 2024-06-10 01:31:20,612 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2024-06-10 01:31:21,320 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2024-06-10 01:31:21,332 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
@@ -234,7 +234,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
@@ -305,9 +305,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Libra
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
 	at org.h2.mvstore.db.Store.<init>(Store.java:133)
 	... 59 common frames omitted
-2024-06-10 01:31:52,377 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16916 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:31:52,379 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:31:52,380 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:31:52,377 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16916 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:31:52,379 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:31:52,380 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:31:53,489 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:31:53,583 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:31:54,272 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -358,7 +358,7 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 2024-06-10 01:31:57,141 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2024-06-10 01:31:57,791 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2024-06-10 01:31:57,801 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
@@ -387,7 +387,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+	at com.albumSystem.demo.AlbumApplication.main(AlbumApplication.java:14)
 Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
@@ -458,9 +458,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Libra
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
 	at org.h2.mvstore.db.Store.<init>(Store.java:133)
 	... 59 common frames omitted
-2024-06-10 01:32:18,449 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17059 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:32:18,452 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:32:18,453 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:32:18,449 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17059 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:32:18,452 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:32:18,453 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:32:19,467 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:32:19,544 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:32:20,124 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -503,9 +503,9 @@ Action:
 
 Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
 
-2024-06-10 01:32:36,182 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17164 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:32:36,184 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:32:36,185 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:32:36,182 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17164 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:32:36,184 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:32:36,185 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:32:37,224 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:32:37,304 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:32:37,912 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -548,9 +548,9 @@ Action:
 
 Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
 
-2024-06-10 01:33:55,376 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:33:55,378 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:33:55,379 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:33:55,376 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:33:55,378 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:33:55,379 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:33:56,538 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:33:56,635 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:33:57,309 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -573,7 +573,7 @@ Identify and stop the process that's listening on port 8082 or configure this ap
 2024-06-10 01:34:00,398 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 01:34:00,677 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52288c65, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33ef393a, org.springframework.security.web.context.SecurityContextHolderFilter@3d9c69f8, org.springframework.security.web.header.HeaderWriterFilter@67201eeb, org.springframework.web.filter.CorsFilter@6d18401b, org.springframework.security.web.authentication.logout.LogoutFilter@2bab1821, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@361d169a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@369d624d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12921ee1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ebcfcf1, org.springframework.security.web.session.SessionManagementFilter@409df37d, org.springframework.security.web.access.ExceptionTranslationFilter@7d43c89f, org.springframework.security.web.access.intercept.AuthorizationFilter@6cc022ac]
 2024-06-10 01:34:01,079 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 01:34:01,097 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.278 seconds (process running for 6.896)
+2024-06-10 01:34:01,097 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.278 seconds (process running for 6.896)
 2024-06-10 01:34:09,673 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 01:34:09,674 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 01:34:09,676 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
@@ -604,9 +604,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:44:28,896 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 01:44:28,900 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 01:44:28,902 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 01:44:35,627 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 20878 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:44:35,631 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:44:35,632 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:44:35,627 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 20878 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:44:35,631 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:44:35,632 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:44:36,955 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:44:37,032 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:44:37,744 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -629,7 +629,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:44:41,117 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 01:44:41,387 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d2693f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@352a8183, org.springframework.security.web.context.SecurityContextHolderFilter@570089c4, org.springframework.security.web.header.HeaderWriterFilter@5fb58f15, org.springframework.web.filter.CorsFilter@361d169a, org.springframework.security.web.authentication.logout.LogoutFilter@7915111a, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@64dcfd09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ab1c7a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e2e11ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47a68e3f, org.springframework.security.web.session.SessionManagementFilter@689fe2a3, org.springframework.security.web.access.ExceptionTranslationFilter@3b4b2c03, org.springframework.security.web.access.intercept.AuthorizationFilter@11ec699]
 2024-06-10 01:44:41,679 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 01:44:41,705 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.656 seconds (process running for 7.27)
+2024-06-10 01:44:41,705 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.656 seconds (process running for 7.27)
 2024-06-10 01:44:43,174 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 01:44:43,175 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 01:44:43,177 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
@@ -637,9 +637,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:54:26,536 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 01:54:26,542 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 01:54:26,545 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 01:54:32,514 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 23815 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:54:32,516 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:54:32,516 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:54:32,514 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 23815 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:54:32,516 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:54:32,516 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:54:33,692 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:54:33,763 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:54:34,412 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -662,7 +662,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:54:37,724 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 01:54:38,004 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@fefd4a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d2693f, org.springframework.security.web.context.SecurityContextHolderFilter@261c5d1f, org.springframework.security.web.header.HeaderWriterFilter@339b45f8, org.springframework.web.filter.CorsFilter@352a8183, org.springframework.security.web.authentication.logout.LogoutFilter@25bd68ea, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@3f119b55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@409df37d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33fc92d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@361d169a, org.springframework.security.web.session.SessionManagementFilter@75c095a5, org.springframework.security.web.access.ExceptionTranslationFilter@5c438795, org.springframework.security.web.access.intercept.AuthorizationFilter@376c5950]
 2024-06-10 01:54:38,284 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 01:54:38,302 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.348 seconds (process running for 6.944)
+2024-06-10 01:54:38,302 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.348 seconds (process running for 6.944)
 2024-06-10 01:54:40,206 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 01:54:40,206 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 01:54:40,208 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -670,9 +670,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:57:25,282 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 01:57:25,286 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 01:57:25,287 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 01:57:30,219 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 24704 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 01:57:30,221 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 01:57:30,222 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:57:30,219 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 24704 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:57:30,221 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:57:30,222 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 01:57:31,286 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 01:57:31,365 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
 2024-06-10 01:57:31,973 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -695,7 +695,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 01:57:34,626 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 01:57:34,994 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3aec2f59, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f72855d, org.springframework.security.web.context.SecurityContextHolderFilter@6a0a0f12, org.springframework.security.web.header.HeaderWriterFilter@49d5c751, org.springframework.web.filter.CorsFilter@13f358f8, org.springframework.security.web.authentication.logout.LogoutFilter@444fbd13, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@5c960f64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75c095a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d9c69f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f119b55, org.springframework.security.web.session.SessionManagementFilter@4d25943d, org.springframework.security.web.access.ExceptionTranslationFilter@75f9a35a, org.springframework.security.web.access.intercept.AuthorizationFilter@64864875]
 2024-06-10 01:57:35,321 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 01:57:35,343 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.694 seconds (process running for 6.387)
+2024-06-10 01:57:35,343 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 5.694 seconds (process running for 6.387)
 2024-06-10 01:57:56,311 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 01:57:56,312 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 01:57:56,313 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -703,9 +703,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:02:26,923 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:02:26,926 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:02:26,929 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:02:33,149 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 26199 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:02:33,151 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:02:33,152 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:02:33,149 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 26199 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:02:33,151 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:02:33,152 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:02:34,199 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:02:34,271 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:02:34,879 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -728,7 +728,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:02:37,839 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:02:38,151 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33ef393a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d18401b, org.springframework.security.web.context.SecurityContextHolderFilter@1235732d, org.springframework.security.web.header.HeaderWriterFilter@2e41b65a, org.springframework.web.filter.CorsFilter@1ebcfcf1, org.springframework.security.web.authentication.logout.LogoutFilter@7f6137fb, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@47a68e3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54644470, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7695184b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8e100e7, org.springframework.security.web.session.SessionManagementFilter@2ab1c7a9, org.springframework.security.web.access.ExceptionTranslationFilter@149ef64a, org.springframework.security.web.access.intercept.AuthorizationFilter@7f219e84]
 2024-06-10 02:02:38,446 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:02:38,461 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.896 seconds (process running for 6.541)
+2024-06-10 02:02:38,461 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 5.896 seconds (process running for 6.541)
 2024-06-10 02:04:01,990 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:04:01,991 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:04:01,993 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
@@ -736,9 +736,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:06:31,714 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:06:31,718 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:06:31,720 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:06:34,332 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 27536 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:06:34,334 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:06:34,335 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:06:34,332 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 27536 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:06:34,334 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:06:34,335 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:06:35,345 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:06:35,426 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:06:36,120 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -761,7 +761,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:06:39,146 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:06:39,445 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4eee730c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b1d1558, org.springframework.security.web.context.SecurityContextHolderFilter@1f8ac459, org.springframework.security.web.header.HeaderWriterFilter@259f0fdb, org.springframework.web.filter.CorsFilter@6cc022ac, org.springframework.security.web.authentication.logout.LogoutFilter@4fbdee7a, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@11ec699, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@149ef64a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75c095a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f219e84, org.springframework.security.web.session.SessionManagementFilter@3b4b2c03, org.springframework.security.web.access.ExceptionTranslationFilter@381d7c4c, org.springframework.security.web.access.intercept.AuthorizationFilter@7915111a]
 2024-06-10 02:06:39,743 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:06:39,758 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.082 seconds (process running for 6.694)
+2024-06-10 02:06:39,758 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.082 seconds (process running for 6.694)
 2024-06-10 02:06:42,898 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:06:42,900 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:06:42,901 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -769,9 +769,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:08:22,539 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:08:22,543 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:08:22,545 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:08:28,651 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 28124 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:08:28,654 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:08:28,655 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:08:28,651 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 28124 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:08:28,654 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:08:28,655 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:08:29,716 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:08:29,787 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:08:30,368 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -794,7 +794,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:08:33,070 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:08:33,577 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@312e8eaf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c960f64, org.springframework.security.web.context.SecurityContextHolderFilter@4d25943d, org.springframework.security.web.header.HeaderWriterFilter@4e58eda2, org.springframework.web.filter.CorsFilter@2f307fcc, org.springframework.security.web.authentication.logout.LogoutFilter@6bf2ecbb, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@7f219e84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495a9305, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@409df37d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aec2f59, org.springframework.security.web.session.SessionManagementFilter@149ef64a, org.springframework.security.web.access.ExceptionTranslationFilter@1c2273f6, org.springframework.security.web.access.intercept.AuthorizationFilter@7f6137fb]
 2024-06-10 02:08:34,133 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:08:34,150 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.055 seconds (process running for 6.663)
+2024-06-10 02:08:34,150 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.055 seconds (process running for 6.663)
 2024-06-10 02:09:12,864 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:09:12,865 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:09:12,866 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -802,9 +802,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:15:48,320 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:15:48,326 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:15:48,328 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:15:54,324 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 30311 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:15:54,327 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:15:54,329 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:15:54,324 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 30311 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:15:54,327 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:15:54,329 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:15:55,372 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:15:55,447 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:15:56,071 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -827,7 +827,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:16:00,054 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:16:00,411 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50f5ce5b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31aee6d9, org.springframework.security.web.context.SecurityContextHolderFilter@7695184b, org.springframework.security.web.header.HeaderWriterFilter@570089c4, org.springframework.web.filter.CorsFilter@7f0b2bf1, org.springframework.security.web.authentication.logout.LogoutFilter@7d2ddbf3, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@38aed8ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b89515b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74ec4df3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a507ea0, org.springframework.security.web.session.SessionManagementFilter@5b908c6d, org.springframework.security.web.access.ExceptionTranslationFilter@5257123d, org.springframework.security.web.access.intercept.AuthorizationFilter@fefd4a2]
 2024-06-10 02:16:00,708 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:16:00,723 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 7.0 seconds (process running for 7.639)
+2024-06-10 02:16:00,723 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 7.0 seconds (process running for 7.639)
 2024-06-10 02:16:54,995 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:16:54,995 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:16:54,997 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -835,9 +835,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:19:29,039 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:19:29,042 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:19:29,044 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:19:35,209 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 31454 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:19:35,212 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:19:35,213 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:19:35,209 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 31454 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:19:35,212 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:19:35,213 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:19:36,232 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:19:36,313 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:19:36,936 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -860,7 +860,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:19:39,585 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:19:39,864 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79c4454, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50f5ce5b, org.springframework.security.web.context.SecurityContextHolderFilter@12921ee1, org.springframework.security.web.header.HeaderWriterFilter@261c5d1f, org.springframework.web.filter.CorsFilter@31aee6d9, org.springframework.security.web.authentication.logout.LogoutFilter@11ec699, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@147ea894, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29390110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9a7211, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f0b2bf1, org.springframework.security.web.session.SessionManagementFilter@189f9f9f, org.springframework.security.web.access.ExceptionTranslationFilter@689fe2a3, org.springframework.security.web.access.intercept.AuthorizationFilter@64dcfd09]
 2024-06-10 02:19:40,264 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:19:40,280 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.62 seconds (process running for 6.22)
+2024-06-10 02:19:40,280 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 5.62 seconds (process running for 6.22)
 2024-06-10 02:19:44,015 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:19:44,016 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:19:44,017 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -868,9 +868,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:28:10,596 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:28:10,601 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:28:10,603 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:28:17,748 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 34113 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:28:17,749 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:28:17,752 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:28:17,748 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 34113 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:28:17,749 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:28:17,752 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:28:18,754 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:28:18,833 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:28:19,418 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -893,7 +893,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:28:21,752 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:28:22,090 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79c4454, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50f5ce5b, org.springframework.security.web.context.SecurityContextHolderFilter@12921ee1, org.springframework.security.web.header.HeaderWriterFilter@261c5d1f, org.springframework.web.filter.CorsFilter@31aee6d9, org.springframework.security.web.authentication.logout.LogoutFilter@11ec699, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@147ea894, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29390110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9a7211, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f0b2bf1, org.springframework.security.web.session.SessionManagementFilter@189f9f9f, org.springframework.security.web.access.ExceptionTranslationFilter@689fe2a3, org.springframework.security.web.access.intercept.AuthorizationFilter@64dcfd09]
 2024-06-10 02:28:22,402 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:28:22,417 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.221 seconds (process running for 5.86)
+2024-06-10 02:28:22,417 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 5.221 seconds (process running for 5.86)
 2024-06-10 02:28:44,475 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 02:28:44,477 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 02:28:44,478 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -901,9 +901,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:36:04,892 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 02:36:04,896 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 02:36:04,899 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 02:36:11,617 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 36436 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 02:36:11,621 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 02:36:11,622 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:36:11,617 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 36436 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:36:11,621 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:36:11,622 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 02:36:12,648 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 02:36:12,726 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
 2024-06-10 02:36:13,304 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -926,7 +926,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 02:36:17,006 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 02:36:17,362 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d3a56ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@141874c8, org.springframework.security.web.context.SecurityContextHolderFilter@6e2e11ee, org.springframework.security.web.header.HeaderWriterFilter@b6fea12, org.springframework.web.filter.CorsFilter@147ea894, org.springframework.security.web.authentication.logout.LogoutFilter@6eeb15f9, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@8e100e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b908c6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76379796, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38aed8ad, org.springframework.security.web.session.SessionManagementFilter@54644470, org.springframework.security.web.access.ExceptionTranslationFilter@495a9305, org.springframework.security.web.access.intercept.AuthorizationFilter@3aec2f59]
 2024-06-10 02:36:17,643 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 02:36:17,658 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.6 seconds (process running for 7.211)
+2024-06-10 02:36:17,658 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.6 seconds (process running for 7.211)
 2024-06-10 03:33:01,757 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 03:33:01,758 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 03:33:01,759 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -934,9 +934,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:35:19,285 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 03:35:19,288 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 03:35:19,290 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 03:35:26,308 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 53283 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 03:35:26,312 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 03:35:26,313 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:35:26,308 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 53283 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:35:26,312 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:35:26,313 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 03:35:27,422 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 03:35:27,503 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
 2024-06-10 03:35:28,117 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -959,7 +959,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:35:31,113 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 03:35:31,490 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d2ddbf3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eee730c, org.springframework.security.web.context.SecurityContextHolderFilter@5fb58f15, org.springframework.security.web.header.HeaderWriterFilter@1e3689e7, org.springframework.web.filter.CorsFilter@1b1d1558, org.springframework.security.web.authentication.logout.LogoutFilter@77350382, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@376c5950, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d43c89f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b6fea12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cc022ac, org.springframework.security.web.session.SessionManagementFilter@5c438795, org.springframework.security.web.access.ExceptionTranslationFilter@1bdb6b36, org.springframework.security.web.access.intercept.AuthorizationFilter@25bd68ea]
 2024-06-10 03:35:31,837 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 03:35:31,854 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.162 seconds (process running for 6.81)
+2024-06-10 03:35:31,854 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.162 seconds (process running for 6.81)
 2024-06-10 03:45:39,254 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 03:45:39,255 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 03:45:39,256 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -967,9 +967,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:50:02,963 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 03:50:02,968 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 03:50:02,970 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 03:50:10,785 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 57598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 03:50:10,790 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 03:50:10,791 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:50:10,785 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 57598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:50:10,790 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:50:10,791 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 03:50:11,872 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 03:50:11,984 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
 2024-06-10 03:50:12,604 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -992,7 +992,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:50:15,389 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 03:50:15,733 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47a68e3f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52288c65, org.springframework.security.web.context.SecurityContextHolderFilter@6e818345, org.springframework.security.web.header.HeaderWriterFilter@149ef64a, org.springframework.web.filter.CorsFilter@33ef393a, org.springframework.security.web.authentication.logout.LogoutFilter@7ae75ba6, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@352a8183, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1235732d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c2ddfeb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d18401b, org.springframework.security.web.session.SessionManagementFilter@570089c4, org.springframework.security.web.access.ExceptionTranslationFilter@1f8ac459, org.springframework.security.web.access.intercept.AuthorizationFilter@1b1d1558]
 2024-06-10 03:50:16,059 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 03:50:16,079 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.908 seconds (process running for 6.555)
+2024-06-10 03:50:16,079 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 5.908 seconds (process running for 6.555)
 2024-06-10 03:50:19,105 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 03:50:19,106 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 03:50:19,107 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
@@ -1000,9 +1000,9 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:57:18,669 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-10 03:57:18,673 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-06-10 03:57:18,678 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-10 03:57:26,715 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 59822 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
-2024-06-10 03:57:26,718 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-10 03:57:26,719 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:57:26,715 [INFO] com.albumSystem.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 59822 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:57:26,718 [DEBUG] com.albumSystem.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:57:26,719 [INFO] com.albumSystem.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
 2024-06-10 03:57:27,878 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2024-06-10 03:57:28,012 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 125 ms. Found 3 JPA repository interfaces.
 2024-06-10 03:57:28,834 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
@@ -1025,7 +1025,7 @@ java.lang.IllegalArgumentException: The Unicode character [截] at code point [2
 2024-06-10 03:57:31,885 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
 2024-06-10 03:57:32,268 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f307fcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3aec2f59, org.springframework.security.web.context.SecurityContextHolderFilter@495a9305, org.springframework.security.web.header.HeaderWriterFilter@7acbd3d0, org.springframework.web.filter.CorsFilter@7f72855d, org.springframework.security.web.authentication.logout.LogoutFilter@5955568, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@312e8eaf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b6fea12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e818345, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f358f8, org.springframework.security.web.session.SessionManagementFilter@2e41b65a, org.springframework.security.web.access.ExceptionTranslationFilter@4e58eda2, org.springframework.security.web.access.intercept.AuthorizationFilter@179f30b7]
 2024-06-10 03:57:32,722 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-06-10 03:57:32,738 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.658 seconds (process running for 7.35)
+2024-06-10 03:57:32,738 [INFO] com.albumSystem.demo.AlbumApplication [main] Started AlbumApplication in 6.658 seconds (process running for 7.35)
 2024-06-10 03:57:37,544 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-10 03:57:37,545 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
 2024-06-10 03:57:37,547 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
