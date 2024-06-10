@@ -102,7 +102,7 @@ public class AlbumController {
 
     }
 
-    @PostMapping(value = "/albums/{album_id}/photoes",consumes = {"multipart/form-data"})
+    @PostMapping(value = "/albums/{album_id}/photos",consumes = {"multipart/form-data"})
     @Operation(summary = "Upload photo album")
     @SecurityRequirement(name="album-system-api")
     public ResponseEntity<List<HashMap<String, List<String>>>> photos(@RequestPart(required = true) MultipartFile[] files, @PathVariable long album_id, Authentication authentication){
@@ -152,9 +152,8 @@ public class AlbumController {
 
                 BufferedImage thumbImg=AppUtil.getThumbnail(file,THUMBNAIL_WIDTH);
                 File thumbnail_location=new File(AppUtil.get_photo_upload_path(final_photo_name,THUMBNAIL_FOLDER_NAME,album_id));
+                //there r may have a bug: the file.getcontenttype()!=file.getoriginalname.split(".")
                 ImageIO.write(thumbImg,file.getContentType().split("/")[1],thumbnail_location);
-
-
 
             }catch (Exception e){
                 log.debug(AlbumError.PHOTO_UPLOAD_ERROR.toString()+":"+e.getMessage());

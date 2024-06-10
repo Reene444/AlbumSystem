@@ -18,10 +18,12 @@ import java.nio.file.Paths;
 
 public class AppUtil {
     public static String get_photo_upload_path(String fileName,String folder_name,long album_id)throws IOException{
-        String path="src\\main\\resources\\static\\uploads\\"+album_id+folder_name;
+        String path="src/main/resources/static/uploads/"+album_id+"/"+folder_name;
 
         Files.createDirectories(Paths.get(path));
-        return new File(path).getAbsolutePath()+"\\"+fileName;
+        System.out.println(Paths.get(path)+"/"+fileName);
+        System.out.println(Files.createDirectories(Paths.get(path)));
+        return new File(path).getAbsolutePath()+"/"+fileName;
     }
 
     public static BufferedImage getThumbnail(MultipartFile originalFile, Integer width)throws IOException{
@@ -33,7 +35,7 @@ public class AppUtil {
     }
 
     public static Resource getFileAsResource(long album_id,String folder_name,String file_name)throws IOException{
-        String location="src\\main\\resources\\static\\uploads\\"+ album_id+"\\"+folder_name+"\\"+file_name;
+        String location="src/main/resources/static/uploads/"+ album_id+"/"+folder_name+"/"+file_name;
         File file=new File(location);
         if(file.exists()){
             Path path=Paths.get(file.getAbsolutePath());
@@ -43,7 +45,6 @@ public class AppUtil {
             return null;
         }
     }
-
 
 
 }

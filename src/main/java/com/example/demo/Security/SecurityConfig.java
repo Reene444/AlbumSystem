@@ -91,7 +91,7 @@ public class SecurityConfig {
                 .headers((headers)->headers.frameOptions((frameOptions)->frameOptions.disable()))
                 .authorizeHttpRequests(authorize ->authorize
                         .dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
-                        .requestMatchers("/api/v1/albums/add","/api/v1/albums","/api/v1/albums/{album_id}/photoes").authenticated()
+                        .requestMatchers("/api/v1/albums/add","/api/v1/albums","/api/v1/albums/{album_id}/photos","/api/v1/albums/{album_id}/photos/{photo_id}/download-photo","/api/v1/albums/{album_id}/photos/{photo_id}/download-thumbnail").authenticated()
                         .requestMatchers("/api/v1/auth/token","/auth/users/add", "/swagger-ui/**", "/v3/api-docs/**","/db-console/**").permitAll()
                         .requestMatchers("/api/v1/auth/users").hasAnyAuthority("SCOPE_ADMIN")
                         .requestMatchers("/test/**").authenticated()

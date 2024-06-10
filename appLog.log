@@ -1,1 +1,1032 @@
 2024-06-10 00:19:30,535 [WARN] com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m2s936ms).
+2024-06-10 01:21:43,554 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 13859 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:21:43,557 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:21:43,558 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:21:44,669 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:21:44,774 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:21:45,440 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:21:45,452 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:21:45,452 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:21:45,510 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:21:45,511 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1898 ms
+2024-06-10 01:21:45,548 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:21:46,771 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:21:46,811 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:21:46,835 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:21:47,090 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:21:47,111 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:21:48,128 [WARN] org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+2024-06-10 01:21:48,165 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:21:48,867 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:21:48,880 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:21:49,902 [WARN] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 90020, SQLState: 90020
+2024-06-10 01:21:49,903 [ERROR] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+2024-06-10 01:21:49,912 [ERROR] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:21:49,913 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:21:49,916 [INFO] org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2024-06-10 01:21:49,947 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-10 01:21:49,965 [ERROR] org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:112)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:79)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropTables(SchemaDropperImpl.java:381)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:253)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 19 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:165)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 42 common frames omitted
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 59 common frames omitted
+2024-06-10 01:31:15,849 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16730 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:31:15,851 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:31:15,852 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:31:17,150 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:31:17,247 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:31:17,863 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:31:17,874 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:31:17,875 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:31:17,924 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:31:17,924 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2008 ms
+2024-06-10 01:31:17,959 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:19,187 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:31:19,230 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:31:19,255 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:31:19,518 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:31:19,538 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:20,559 [WARN] org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+2024-06-10 01:31:20,612 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:31:21,320 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:31:21,332 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:22,346 [WARN] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 90020, SQLState: 90020
+2024-06-10 01:31:22,346 [ERROR] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+2024-06-10 01:31:22,358 [ERROR] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:31:22,360 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:31:22,363 [INFO] org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2024-06-10 01:31:22,388 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-10 01:31:22,404 [ERROR] org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:112)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:79)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropTables(SchemaDropperImpl.java:381)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:253)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 19 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:165)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 42 common frames omitted
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 59 common frames omitted
+2024-06-10 01:31:52,377 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 16916 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:31:52,379 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:31:52,380 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:31:53,489 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:31:53,583 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:31:54,272 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:31:54,284 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:31:54,285 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:31:54,346 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:31:54,346 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1901 ms
+2024-06-10 01:31:54,386 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:55,721 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:31:55,760 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:31:55,786 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:31:56,074 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:31:56,096 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:57,116 [WARN] org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+2024-06-10 01:31:57,141 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:31:57,791 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:31:57,801 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:31:58,823 [WARN] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 90020, SQLState: 90020
+2024-06-10 01:31:58,824 [ERROR] org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+2024-06-10 01:31:58,838 [ERROR] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:31:58,840 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+2024-06-10 01:31:58,844 [INFO] org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2024-06-10 01:31:58,874 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-10 01:31:58,893 [ERROR] org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.demo.AlbumApplication.main(AlbumApplication.java:14)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:112)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:79)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropTables(SchemaDropperImpl.java:381)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:253)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 19 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: "/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:165)
+	at org.h2.mvstore.db.Store.<init>(Store.java:142)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 42 common frames omitted
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/db/db.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	... 59 common frames omitted
+2024-06-10 01:32:18,449 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17059 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:32:18,452 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:32:18,453 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:32:19,467 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:32:19,544 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:32:20,124 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:32:20,133 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:32:20,133 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:32:20,182 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:32:20,182 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1665 ms
+2024-06-10 01:32:20,214 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:32:20,352 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:32:20,354 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:32:20,368 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:32:20,599 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:32:20,641 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:32:20,667 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:32:20,854 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:32:20,885 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:32:21,511 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:32:21,551 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:32:22,542 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:32:22,563 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:32:22,847 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d2ddbf3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eee730c, org.springframework.security.web.context.SecurityContextHolderFilter@5fb58f15, org.springframework.security.web.header.HeaderWriterFilter@1e3689e7, org.springframework.web.filter.CorsFilter@1b1d1558, org.springframework.security.web.authentication.logout.LogoutFilter@77350382, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@376c5950, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d43c89f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b6fea12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cc022ac, org.springframework.security.web.session.SessionManagementFilter@5c438795, org.springframework.security.web.access.ExceptionTranslationFilter@1bdb6b36, org.springframework.security.web.access.intercept.AuthorizationFilter@25bd68ea]
+2024-06-10 01:32:23,127 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-06-10 01:32:23,129 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:32:23,131 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2024-06-10 01:32:23,140 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2024-06-10 01:32:23,158 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-10 01:32:23,169 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2024-06-10 01:32:36,182 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17164 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:32:36,184 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:32:36,185 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:32:37,224 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:32:37,304 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:32:37,912 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:32:37,921 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:32:37,921 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:32:37,972 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:32:37,972 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1738 ms
+2024-06-10 01:32:38,007 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:32:38,157 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:32:38,159 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:32:38,172 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:32:38,354 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:32:38,393 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:32:38,419 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:32:38,622 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:32:38,657 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:32:39,404 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:32:39,450 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:32:40,537 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:32:40,559 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:32:40,856 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37aec9b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34538ffe, org.springframework.security.web.context.SecurityContextHolderFilter@259f0fdb, org.springframework.security.web.header.HeaderWriterFilter@1f062e10, org.springframework.web.filter.CorsFilter@7ae75ba6, org.springframework.security.web.authentication.logout.LogoutFilter@54644470, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@25bd68ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36f1bd7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78b29e00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bab1821, org.springframework.security.web.session.SessionManagementFilter@1bdb6b36, org.springframework.security.web.access.ExceptionTranslationFilter@381c826c, org.springframework.security.web.access.intercept.AuthorizationFilter@77350382]
+2024-06-10 01:32:41,254 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-06-10 01:32:41,257 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:32:41,260 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2024-06-10 01:32:41,478 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2024-06-10 01:32:41,500 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-10 01:32:41,513 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2024-06-10 01:33:55,376 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 17598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:33:55,378 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:33:55,379 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:33:56,538 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:33:56,635 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:33:57,309 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:33:57,319 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:33:57,319 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:33:57,366 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:33:57,367 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1925 ms
+2024-06-10 01:33:57,402 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:33:57,585 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:33:57,588 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:33:57,605 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:33:57,882 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:33:57,914 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:33:57,936 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:33:58,117 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:33:58,151 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:33:58,781 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:33:58,819 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:34:00,376 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:34:00,398 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:34:00,677 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52288c65, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33ef393a, org.springframework.security.web.context.SecurityContextHolderFilter@3d9c69f8, org.springframework.security.web.header.HeaderWriterFilter@67201eeb, org.springframework.web.filter.CorsFilter@6d18401b, org.springframework.security.web.authentication.logout.LogoutFilter@2bab1821, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@361d169a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@369d624d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12921ee1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ebcfcf1, org.springframework.security.web.session.SessionManagementFilter@409df37d, org.springframework.security.web.access.ExceptionTranslationFilter@7d43c89f, org.springframework.security.web.access.intercept.AuthorizationFilter@6cc022ac]
+2024-06-10 01:34:01,079 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 01:34:01,097 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.278 seconds (process running for 6.896)
+2024-06-10 01:34:09,673 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 01:34:09,674 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 01:34:09,676 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-06-10 01:34:10,969 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-6] Init duration for springdoc-openapi is: 656 ms
+2024-06-10 01:37:02,663 [WARN] org.apache.coyote.http11.Http11Processor [http-nio-8082-exec-1] The HTTP response header [Content-Disposition] with value [attachment; filename="截屏2022-12-01 17.16.57.png"] has been removed from the response because it is invalid
+java.lang.IllegalArgumentException: The Unicode character [截] at code point [25,130] cannot be encoded as it is outside the permitted range of 0 to 255
+	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:310)
+	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:283)
+	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:385)
+	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:364)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1047)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:377)
+	at org.apache.coyote.Response.action(Response.java:210)
+	at org.apache.coyote.Response.sendHeaders(Response.java:454)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:285)
+	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:244)
+	at org.apache.catalina.connector.Response.finishResponse(Response.java:421)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:373)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-10 01:44:28,896 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:44:28,900 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 01:44:28,902 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 01:44:35,627 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 20878 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:44:35,631 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:44:35,632 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:44:36,955 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:44:37,032 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:44:37,744 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:44:37,753 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:44:37,754 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:44:37,801 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:44:37,801 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2114 ms
+2024-06-10 01:44:37,834 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:44:37,982 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:44:37,984 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:44:37,997 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:44:38,201 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:44:38,241 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:44:38,264 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:44:38,464 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:44:38,494 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:44:39,245 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:44:39,291 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:44:41,098 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:44:41,117 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:44:41,387 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d2693f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@352a8183, org.springframework.security.web.context.SecurityContextHolderFilter@570089c4, org.springframework.security.web.header.HeaderWriterFilter@5fb58f15, org.springframework.web.filter.CorsFilter@361d169a, org.springframework.security.web.authentication.logout.LogoutFilter@7915111a, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@64dcfd09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ab1c7a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e2e11ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47a68e3f, org.springframework.security.web.session.SessionManagementFilter@689fe2a3, org.springframework.security.web.access.ExceptionTranslationFilter@3b4b2c03, org.springframework.security.web.access.intercept.AuthorizationFilter@11ec699]
+2024-06-10 01:44:41,679 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 01:44:41,705 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.656 seconds (process running for 7.27)
+2024-06-10 01:44:43,174 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 01:44:43,175 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 01:44:43,177 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-06-10 01:44:44,557 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 719 ms
+2024-06-10 01:54:26,536 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:54:26,542 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 01:54:26,545 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 01:54:32,514 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 23815 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:54:32,516 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:54:32,516 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:54:33,692 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:54:33,763 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:54:34,412 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:54:34,421 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:54:34,422 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:54:34,471 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:54:34,471 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1887 ms
+2024-06-10 01:54:34,505 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:54:34,657 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:54:34,658 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:54:34,671 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:54:34,926 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:54:34,961 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:54:34,984 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:54:35,185 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:54:35,219 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:54:35,917 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:54:35,958 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:54:37,686 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:54:37,724 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:54:38,004 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@fefd4a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d2693f, org.springframework.security.web.context.SecurityContextHolderFilter@261c5d1f, org.springframework.security.web.header.HeaderWriterFilter@339b45f8, org.springframework.web.filter.CorsFilter@352a8183, org.springframework.security.web.authentication.logout.LogoutFilter@25bd68ea, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@3f119b55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@409df37d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33fc92d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@361d169a, org.springframework.security.web.session.SessionManagementFilter@75c095a5, org.springframework.security.web.access.ExceptionTranslationFilter@5c438795, org.springframework.security.web.access.intercept.AuthorizationFilter@376c5950]
+2024-06-10 01:54:38,284 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 01:54:38,302 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.348 seconds (process running for 6.944)
+2024-06-10 01:54:40,206 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 01:54:40,206 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 01:54:40,208 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 01:54:41,418 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 568 ms
+2024-06-10 01:57:25,282 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:57:25,286 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 01:57:25,287 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 01:57:30,219 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 24704 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 01:57:30,221 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 01:57:30,222 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 01:57:31,286 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 01:57:31,365 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2024-06-10 01:57:31,973 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 01:57:31,983 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 01:57:31,983 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 01:57:32,035 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 01:57:32,036 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1761 ms
+2024-06-10 01:57:32,069 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 01:57:32,218 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 01:57:32,220 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 01:57:32,235 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 01:57:32,491 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 01:57:32,526 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 01:57:32,548 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 01:57:32,750 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 01:57:32,781 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 01:57:33,474 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 01:57:33,522 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 01:57:34,605 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 01:57:34,626 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 01:57:34,994 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3aec2f59, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f72855d, org.springframework.security.web.context.SecurityContextHolderFilter@6a0a0f12, org.springframework.security.web.header.HeaderWriterFilter@49d5c751, org.springframework.web.filter.CorsFilter@13f358f8, org.springframework.security.web.authentication.logout.LogoutFilter@444fbd13, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@5c960f64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75c095a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d9c69f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f119b55, org.springframework.security.web.session.SessionManagementFilter@4d25943d, org.springframework.security.web.access.ExceptionTranslationFilter@75f9a35a, org.springframework.security.web.access.intercept.AuthorizationFilter@64864875]
+2024-06-10 01:57:35,321 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 01:57:35,343 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.694 seconds (process running for 6.387)
+2024-06-10 01:57:56,311 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 01:57:56,312 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 01:57:56,313 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 01:57:57,547 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 595 ms
+2024-06-10 02:02:26,923 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:02:26,926 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:02:26,929 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:02:33,149 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 26199 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:02:33,151 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:02:33,152 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:02:34,199 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:02:34,271 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:02:34,879 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:02:34,889 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:02:34,889 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:02:34,944 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:02:34,944 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1739 ms
+2024-06-10 02:02:34,971 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:02:35,126 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:02:35,128 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:02:35,141 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:02:35,404 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:02:35,441 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:02:35,463 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:02:35,659 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:02:35,688 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:02:36,356 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:02:36,400 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:02:37,817 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:02:37,839 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:02:38,151 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33ef393a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d18401b, org.springframework.security.web.context.SecurityContextHolderFilter@1235732d, org.springframework.security.web.header.HeaderWriterFilter@2e41b65a, org.springframework.web.filter.CorsFilter@1ebcfcf1, org.springframework.security.web.authentication.logout.LogoutFilter@7f6137fb, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@47a68e3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54644470, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7695184b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8e100e7, org.springframework.security.web.session.SessionManagementFilter@2ab1c7a9, org.springframework.security.web.access.ExceptionTranslationFilter@149ef64a, org.springframework.security.web.access.intercept.AuthorizationFilter@7f219e84]
+2024-06-10 02:02:38,446 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:02:38,461 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.896 seconds (process running for 6.541)
+2024-06-10 02:04:01,990 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:04:01,991 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:04:01,993 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-06-10 02:04:03,133 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 566 ms
+2024-06-10 02:06:31,714 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:06:31,718 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:06:31,720 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:06:34,332 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 27536 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:06:34,334 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:06:34,335 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:06:35,345 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:06:35,426 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:06:36,120 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:06:36,128 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:06:36,129 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:06:36,178 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:06:36,178 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1785 ms
+2024-06-10 02:06:36,214 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:06:36,357 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:06:36,359 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:06:36,372 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:06:36,626 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:06:36,662 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:06:36,683 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:06:36,872 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:06:36,902 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:06:37,587 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:06:37,639 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:06:39,128 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:06:39,146 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:06:39,445 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4eee730c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b1d1558, org.springframework.security.web.context.SecurityContextHolderFilter@1f8ac459, org.springframework.security.web.header.HeaderWriterFilter@259f0fdb, org.springframework.web.filter.CorsFilter@6cc022ac, org.springframework.security.web.authentication.logout.LogoutFilter@4fbdee7a, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@11ec699, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@149ef64a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75c095a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f219e84, org.springframework.security.web.session.SessionManagementFilter@3b4b2c03, org.springframework.security.web.access.ExceptionTranslationFilter@381d7c4c, org.springframework.security.web.access.intercept.AuthorizationFilter@7915111a]
+2024-06-10 02:06:39,743 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:06:39,758 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.082 seconds (process running for 6.694)
+2024-06-10 02:06:42,898 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:06:42,900 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:06:42,901 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 02:06:44,055 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 583 ms
+2024-06-10 02:08:22,539 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:08:22,543 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:08:22,545 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:08:28,651 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 28124 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:08:28,654 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:08:28,655 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:08:29,716 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:08:29,787 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:08:30,368 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:08:30,377 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:08:30,377 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:08:30,435 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:08:30,436 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1712 ms
+2024-06-10 02:08:30,483 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:08:30,637 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:08:30,639 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:08:30,652 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:08:30,934 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:08:30,969 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:08:30,995 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:08:31,230 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:08:31,261 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:08:31,950 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:08:31,992 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:08:33,049 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:08:33,070 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:08:33,577 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@312e8eaf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c960f64, org.springframework.security.web.context.SecurityContextHolderFilter@4d25943d, org.springframework.security.web.header.HeaderWriterFilter@4e58eda2, org.springframework.web.filter.CorsFilter@2f307fcc, org.springframework.security.web.authentication.logout.LogoutFilter@6bf2ecbb, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@7f219e84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495a9305, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@409df37d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aec2f59, org.springframework.security.web.session.SessionManagementFilter@149ef64a, org.springframework.security.web.access.ExceptionTranslationFilter@1c2273f6, org.springframework.security.web.access.intercept.AuthorizationFilter@7f6137fb]
+2024-06-10 02:08:34,133 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:08:34,150 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.055 seconds (process running for 6.663)
+2024-06-10 02:09:12,864 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:09:12,865 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:09:12,866 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 02:09:14,086 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 588 ms
+2024-06-10 02:15:48,320 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:15:48,326 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:15:48,328 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:15:54,324 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 30311 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:15:54,327 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:15:54,329 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:15:55,372 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:15:55,447 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:15:56,071 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:15:56,081 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:15:56,081 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:15:56,135 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:15:56,135 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1745 ms
+2024-06-10 02:15:56,168 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:15:56,319 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:15:56,321 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:15:56,334 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:15:56,535 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:15:56,573 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:15:56,596 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:15:56,789 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:15:56,821 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:15:57,546 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:15:57,593 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:16:00,034 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:16:00,054 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:16:00,411 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50f5ce5b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31aee6d9, org.springframework.security.web.context.SecurityContextHolderFilter@7695184b, org.springframework.security.web.header.HeaderWriterFilter@570089c4, org.springframework.web.filter.CorsFilter@7f0b2bf1, org.springframework.security.web.authentication.logout.LogoutFilter@7d2ddbf3, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@38aed8ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b89515b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74ec4df3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a507ea0, org.springframework.security.web.session.SessionManagementFilter@5b908c6d, org.springframework.security.web.access.ExceptionTranslationFilter@5257123d, org.springframework.security.web.access.intercept.AuthorizationFilter@fefd4a2]
+2024-06-10 02:16:00,708 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:16:00,723 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 7.0 seconds (process running for 7.639)
+2024-06-10 02:16:54,995 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:16:54,995 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:16:54,997 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 02:16:56,141 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 566 ms
+2024-06-10 02:19:29,039 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:19:29,042 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:19:29,044 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:19:35,209 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 31454 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:19:35,212 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:19:35,213 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:19:36,232 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:19:36,313 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:19:36,936 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:19:36,945 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:19:36,945 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:19:36,995 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:19:36,996 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1711 ms
+2024-06-10 02:19:37,040 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:19:37,249 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:19:37,251 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:19:37,264 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:19:37,534 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:19:37,570 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:19:37,592 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:19:37,781 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:19:37,809 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:19:38,452 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:19:38,498 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:19:39,566 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:19:39,585 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:19:39,864 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79c4454, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50f5ce5b, org.springframework.security.web.context.SecurityContextHolderFilter@12921ee1, org.springframework.security.web.header.HeaderWriterFilter@261c5d1f, org.springframework.web.filter.CorsFilter@31aee6d9, org.springframework.security.web.authentication.logout.LogoutFilter@11ec699, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@147ea894, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29390110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9a7211, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f0b2bf1, org.springframework.security.web.session.SessionManagementFilter@189f9f9f, org.springframework.security.web.access.ExceptionTranslationFilter@689fe2a3, org.springframework.security.web.access.intercept.AuthorizationFilter@64dcfd09]
+2024-06-10 02:19:40,264 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:19:40,280 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.62 seconds (process running for 6.22)
+2024-06-10 02:19:44,015 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:19:44,016 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:19:44,017 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 02:19:45,209 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 554 ms
+2024-06-10 02:28:10,596 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:28:10,601 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:28:10,603 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:28:17,748 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 34113 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:28:17,749 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:28:17,752 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:28:18,754 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:28:18,833 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:28:19,418 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:28:19,426 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:28:19,426 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:28:19,474 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:28:19,475 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1664 ms
+2024-06-10 02:28:19,506 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:28:19,640 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:28:19,642 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:28:19,654 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:28:19,844 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:28:19,882 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:28:19,905 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:28:20,099 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:28:20,136 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:28:20,839 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:28:20,886 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:28:21,734 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:28:21,752 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:28:22,090 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79c4454, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50f5ce5b, org.springframework.security.web.context.SecurityContextHolderFilter@12921ee1, org.springframework.security.web.header.HeaderWriterFilter@261c5d1f, org.springframework.web.filter.CorsFilter@31aee6d9, org.springframework.security.web.authentication.logout.LogoutFilter@11ec699, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@147ea894, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29390110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9a7211, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f0b2bf1, org.springframework.security.web.session.SessionManagementFilter@189f9f9f, org.springframework.security.web.access.ExceptionTranslationFilter@689fe2a3, org.springframework.security.web.access.intercept.AuthorizationFilter@64dcfd09]
+2024-06-10 02:28:22,402 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:28:22,417 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.221 seconds (process running for 5.86)
+2024-06-10 02:28:44,475 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 02:28:44,477 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 02:28:44,478 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 02:28:45,628 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 576 ms
+2024-06-10 02:36:04,892 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:36:04,896 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 02:36:04,899 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 02:36:11,617 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 36436 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 02:36:11,621 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 02:36:11,622 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 02:36:12,648 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 02:36:12,726 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2024-06-10 02:36:13,304 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 02:36:13,312 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 02:36:13,313 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 02:36:13,360 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 02:36:13,361 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1677 ms
+2024-06-10 02:36:13,396 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 02:36:13,544 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 02:36:13,546 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 02:36:13,559 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 02:36:13,821 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 02:36:13,858 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 02:36:13,882 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 02:36:14,092 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 02:36:14,120 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 02:36:14,762 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 02:36:14,802 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 02:36:16,985 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 02:36:17,006 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 02:36:17,362 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d3a56ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@141874c8, org.springframework.security.web.context.SecurityContextHolderFilter@6e2e11ee, org.springframework.security.web.header.HeaderWriterFilter@b6fea12, org.springframework.web.filter.CorsFilter@147ea894, org.springframework.security.web.authentication.logout.LogoutFilter@6eeb15f9, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@8e100e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b908c6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76379796, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38aed8ad, org.springframework.security.web.session.SessionManagementFilter@54644470, org.springframework.security.web.access.ExceptionTranslationFilter@495a9305, org.springframework.security.web.access.intercept.AuthorizationFilter@3aec2f59]
+2024-06-10 02:36:17,643 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 02:36:17,658 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.6 seconds (process running for 7.211)
+2024-06-10 03:33:01,757 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 03:33:01,758 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 03:33:01,759 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 03:33:02,890 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 584 ms
+2024-06-10 03:35:19,285 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:35:19,288 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 03:35:19,290 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 03:35:26,308 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 53283 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:35:26,312 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:35:26,313 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:35:27,422 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 03:35:27,503 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2024-06-10 03:35:28,117 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 03:35:28,127 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 03:35:28,127 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 03:35:28,182 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 03:35:28,183 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1816 ms
+2024-06-10 03:35:28,212 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 03:35:28,362 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 03:35:28,364 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 03:35:28,378 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 03:35:28,576 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 03:35:28,618 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 03:35:28,641 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 03:35:28,862 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 03:35:28,895 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 03:35:29,625 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 03:35:29,674 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:35:31,093 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 03:35:31,113 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 03:35:31,490 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d2ddbf3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eee730c, org.springframework.security.web.context.SecurityContextHolderFilter@5fb58f15, org.springframework.security.web.header.HeaderWriterFilter@1e3689e7, org.springframework.web.filter.CorsFilter@1b1d1558, org.springframework.security.web.authentication.logout.LogoutFilter@77350382, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@376c5950, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d43c89f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b6fea12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cc022ac, org.springframework.security.web.session.SessionManagementFilter@5c438795, org.springframework.security.web.access.ExceptionTranslationFilter@1bdb6b36, org.springframework.security.web.access.intercept.AuthorizationFilter@25bd68ea]
+2024-06-10 03:35:31,837 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 03:35:31,854 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.162 seconds (process running for 6.81)
+2024-06-10 03:45:39,254 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 03:45:39,255 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 03:45:39,256 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 03:45:40,467 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 618 ms
+2024-06-10 03:50:02,963 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:50:02,968 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 03:50:02,970 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 03:50:10,785 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 57598 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:50:10,790 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:50:10,791 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:50:11,872 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 03:50:11,984 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
+2024-06-10 03:50:12,604 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 03:50:12,615 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 03:50:12,615 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 03:50:12,671 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 03:50:12,671 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1795 ms
+2024-06-10 03:50:12,706 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 03:50:12,867 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 03:50:12,869 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 03:50:12,882 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 03:50:13,080 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 03:50:13,122 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 03:50:13,147 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 03:50:13,352 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 03:50:13,383 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 03:50:14,135 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 03:50:14,184 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:50:15,367 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 03:50:15,389 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 03:50:15,733 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47a68e3f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52288c65, org.springframework.security.web.context.SecurityContextHolderFilter@6e818345, org.springframework.security.web.header.HeaderWriterFilter@149ef64a, org.springframework.web.filter.CorsFilter@33ef393a, org.springframework.security.web.authentication.logout.LogoutFilter@7ae75ba6, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@352a8183, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1235732d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c2ddfeb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d18401b, org.springframework.security.web.session.SessionManagementFilter@570089c4, org.springframework.security.web.access.ExceptionTranslationFilter@1f8ac459, org.springframework.security.web.access.intercept.AuthorizationFilter@1b1d1558]
+2024-06-10 03:50:16,059 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 03:50:16,079 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 5.908 seconds (process running for 6.555)
+2024-06-10 03:50:19,105 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 03:50:19,106 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 03:50:19,107 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-06-10 03:50:20,277 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 572 ms
+2024-06-10 03:57:18,669 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:57:18,673 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-10 03:57:18,678 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-10 03:57:26,715 [INFO] com.example.demo.AlbumApplication [main] Starting AlbumApplication using Java 17.0.7 with PID 59822 (/Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api/target/classes started by oww in /Users/oww/Library/Mobile Documents/com~apple~CloudDocs/IdeaProjects/springFramwork/React/AlbumSystem_api)
+2024-06-10 03:57:26,718 [DEBUG] com.example.demo.AlbumApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-10 03:57:26,719 [INFO] com.example.demo.AlbumApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-10 03:57:27,878 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10 03:57:28,012 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 125 ms. Found 3 JPA repository interfaces.
+2024-06-10 03:57:28,834 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-06-10 03:57:28,845 [INFO] org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-06-10 03:57:28,845 [INFO] org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-10 03:57:28,931 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-10 03:57:28,932 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2149 ms
+2024-06-10 03:57:28,984 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-10 03:57:29,166 [INFO] com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/db user=ROOT
+2024-06-10 03:57:29,168 [INFO] com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-10 03:57:29,184 [INFO] org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/db'
+2024-06-10 03:57:29,421 [INFO] org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10 03:57:29,465 [INFO] org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10 03:57:29,490 [INFO] org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-10 03:57:29,703 [INFO] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10 03:57:29,737 [WARN] org.hibernate.orm.deprecation [main] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-10 03:57:30,550 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10 03:57:30,601 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10 03:57:31,863 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10 03:57:31,885 [INFO] org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2024-06-10 03:57:32,268 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f307fcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3aec2f59, org.springframework.security.web.context.SecurityContextHolderFilter@495a9305, org.springframework.security.web.header.HeaderWriterFilter@7acbd3d0, org.springframework.web.filter.CorsFilter@7f72855d, org.springframework.security.web.authentication.logout.LogoutFilter@5955568, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@312e8eaf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b6fea12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e818345, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f358f8, org.springframework.security.web.session.SessionManagementFilter@2e41b65a, org.springframework.security.web.access.ExceptionTranslationFilter@4e58eda2, org.springframework.security.web.access.intercept.AuthorizationFilter@179f30b7]
+2024-06-10 03:57:32,722 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-06-10 03:57:32,738 [INFO] com.example.demo.AlbumApplication [main] Started AlbumApplication in 6.658 seconds (process running for 7.35)
+2024-06-10 03:57:37,544 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-10 03:57:37,545 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-10 03:57:37,547 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-06-10 03:57:38,802 [INFO] org.springdoc.api.AbstractOpenApiResource [http-nio-8082-exec-7] Init duration for springdoc-openapi is: 605 ms
